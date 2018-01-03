@@ -12,10 +12,10 @@ $ npm i -S estatico-mocks
 
 ```js
 const gulp = require('gulp');
-const handlebarsTask = require('estatico-mocks');
-const handlebarsOptions = {}; // Custom options, deep-merged into defaults via _.merge
+const mocksTask = require('estatico-mocks');
+const mocksOptions = {}; // Custom options, deep-merged into defaults via _.merge
 
-gulp.task('mocks', () => handlebarsTask(handlebarsOptions));
+gulp.task('mocks', () => mocksTask(mocksOptions));
 ```
 
 ### Options
@@ -126,7 +126,7 @@ data: (file) => {
 }
 ```
 
-Setting up data to be used in handlebars compiling. Return value will be assigned to `file.data` where [`gulp-hb`](https://www.npmjs.com/package/gulp-hb) picks it up.
+Setting up data to be used in handlebars compiling.
 
 ##### plugins.prettify
 
